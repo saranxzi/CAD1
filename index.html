@@ -3,62 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saran Sharma | Portfolio</title>
-    <meta name="description" content="Portfolio of Saran Sharma, a Computer Science & Engineering student at VIT Chennai. Registration Number: 24BCe1918.">
+    <title>Atharv Sharma | Portfolio</title>
+    <meta name="description" content="Portfolio of Atharv Sharma, Computer Science & Engineering student at VIT Chennai. Registration Number: 24BCe1917.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Boxicons for Premium Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons for Modern Icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- Background Elements for Glowing Effect -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
+    <!-- Cyberpunk Terminal Grid Overlay -->
+    <div class="grid-overlay"></div>
+    <div class="glow-accent"></div>
 
     <!-- Header Navigation -->
     <header class="header">
-        <a href="#" class="logo">Saran<span>.</span></a>
+        <a href="#" class="logo">&lt;ATHARV<span>//</span>&gt;</a>
         
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="active">[01] // HOME</a>
+            <a href="#about">[02] // ABOUT</a>
+            <a href="#skills">[03] // SKILLS</a>
+            <a href="#projects">[04] // PROJECTS</a>
+            <a href="#contact">[05] // CONTACT</a>
         </nav>
 
         <div class="menu-icon" id="menu-icon">
-            <i class="bx bx-menu"></i>
+            <i class="bx bx-terminal"></i>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero-section" id="home">
         <div class="hero-content">
-            <span class="subtitle">Welcome to my space</span>
-            <h1>Hi, I'm <span class="highlight">Saran Sharma</span></h1>
-            <h3>I am a <span class="typewriter" id="typewriter"></span><span class="cursor">|</span></h3>
-            <p>Aspiring Computer Science Engineer focused on building sleek web applications and solving complex algorithmic challenges. Currently studying at VIT Chennai.</p>
-            <div class="btn-group">
-                <a href="#contact" class="btn btn-primary">Let's Connect <i class="bx bx-send"></i></a>
-                <a href="#projects" class="btn btn-secondary">Explore Work</a>
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">system_info.sh</span>
             </div>
-            <div class="social-links">
-                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-                <a href="mailto:saran.sharma2024@vitstudent.ac.in" aria-label="Email"><i class="bx bx-envelope"></i></a>
+            <div class="terminal-body">
+                <span class="prompt">guest@atharv-os:~$</span> <span class="command">run init_intro.sh</span>
+                <p class="terminal-output mt-2">Initializing Atharv Sharma profile...</p>
+                <h1>Atharv Sharma</h1>
+                <h3>
+                    <span class="prompt-text">&gt; SYSTEM_STATUS: </span>
+                    <span class="typewriter" id="typewriter"></span><span class="cursor">_</span>
+                </h3>
+                <p class="bio-text">Computer Science Engineering student at VIT Chennai. Dedicated to system optimization, code aesthetics, and backend scalability.</p>
+                
+                <div class="btn-group">
+                    <a href="#contact" class="btn btn-primary">&gt; RUN connect.exe</a>
+                    <a href="#projects" class="btn btn-secondary">[ VIEW_ARCHIVES ]</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="mailto:atharv.sharma2024@vitstudent.ac.in" aria-label="Email"><i class="bx bx-envelope"></i></a>
+                </div>
             </div>
         </div>
+        
         <div class="hero-img-container">
-            <div class="hero-img-glowing-back"></div>
-            <div class="hero-img-box">
-                <img src="assets/developer_avatar.jpg" alt="Saran Sharma Avatar">
+            <div class="hero-img-cyber-border">
+                <div class="corner-bracket top-left"></div>
+                <div class="corner-bracket top-right"></div>
+                <div class="corner-bracket bottom-left"></div>
+                <div class="corner-bracket bottom-right"></div>
+                <div class="hero-img-box">
+                    <img src="assets/developer_avatar.jpg" alt="Atharv Sharma Avatar">
+                </div>
             </div>
         </div>
     </section>
@@ -66,50 +85,53 @@
     <!-- About Section -->
     <section class="about-section scroll-reveal" id="about">
         <div class="section-title">
-            <span>Get To Know Me</span>
-            <h2>About Me</h2>
+            <span>[ SYSTEM_OVERVIEW ]</span>
+            <h2>About_Me</h2>
         </div>
 
         <div class="about-grid">
             <div class="about-details">
-                <h3>Academic Background</h3>
-                <p>I am currently pursuing my <strong>B.Tech in Computer Science and Engineering</strong> at <strong>Vellore Institute of Technology (VIT), Chennai</strong>. As a driven technology enthusiast, I am learning modern computing systems, algorithms, and software development methodologies.</p>
-                
-                <div class="info-cards">
-                    <div class="info-card">
-                        <i class="bx bx-id-card"></i>
-                        <h4>Reg Number</h4>
-                        <p>24BCe1918</p>
+                <div class="cyber-card">
+                    <div class="cyber-card-header">
+                        <h3>BIOGRAPHY // ACADEMICS</h3>
                     </div>
-                    <div class="info-card">
-                        <i class="bx bx-buildings"></i>
-                        <h4>Campus</h4>
-                        <p>VIT Chennai</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="bx bx-book-bookmark"></i>
-                        <h4>Discipline</h4>
-                        <p>CSE (Core)</p>
+                    <div class="cyber-card-body">
+                        <p>Currently pursuing a <strong>B.Tech in Computer Science and Engineering</strong> at <strong>Vellore Institute of Technology (VIT), Chennai</strong>. Focusing on writing efficient algorithms, constructing structural microservices, and debugging core architectures.</p>
+                        
+                        <div class="info-blocks">
+                            <div class="info-block">
+                                <span class="info-label">REG_ID:</span>
+                                <span class="info-value text-crimson">24BCe1917</span>
+                            </div>
+                            <div class="info-block">
+                                <span class="info-label">SECTOR:</span>
+                                <span class="info-value">VIT Chennai</span>
+                            </div>
+                            <div class="info-block">
+                                <span class="info-label">DISCIPLINE:</span>
+                                <span class="info-value">CSE Core</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="about-stats">
-                <div class="stat-box">
+                <div class="stat-card">
                     <span class="stat-number">2028</span>
-                    <span class="stat-text">Graduation Year</span>
+                    <span class="stat-label">EXP_GRAD_YEAR</span>
                 </div>
-                <div class="stat-box">
-                    <span class="stat-number">9.0+</span>
-                    <span class="stat-text">Target CGPA</span>
+                <div class="stat-card">
+                    <span class="stat-number">9.2+</span>
+                    <span class="stat-label">TARGET_GPA</span>
                 </div>
-                <div class="stat-box">
+                <div class="stat-card">
                     <span class="stat-number">5+</span>
-                    <span class="stat-text">Active Projects</span>
+                    <span class="stat-label">COMPILED_PROJS</span>
                 </div>
-                <div class="stat-box">
+                <div class="stat-card">
                     <span class="stat-number">500+</span>
-                    <span class="stat-text">Coding Hours</span>
+                    <span class="stat-label">LOGGED_HOURS</span>
                 </div>
             </div>
         </div>
@@ -118,53 +140,59 @@
     <!-- Skills Section -->
     <section class="skills-section scroll-reveal" id="skills">
         <div class="section-title">
-            <span>What I Bring to the Table</span>
-            <h2>My Skills</h2>
+            <span>[ TECH_CAPABILITIES ]</span>
+            <h2>Core_Skills</h2>
         </div>
 
         <div class="skills-grid">
             <!-- Languages -->
-            <div class="skills-card">
-                <div class="skills-card-header">
-                    <i class="bx bx-code-alt"></i>
-                    <h3>Languages</h3>
+            <div class="cyber-card skills-card">
+                <div class="cyber-card-header">
+                    <i class="bx bx-code-curly"></i>
+                    <h3>LANGUAGES</h3>
                 </div>
-                <div class="skills-list">
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript (ES6+)</span>
-                    <span class="skill-tag">HTML5 / CSS3</span>
+                <div class="cyber-card-body">
+                    <div class="skills-list">
+                        <span class="skill-tag">&gt; C++</span>
+                        <span class="skill-tag">&gt; Java</span>
+                        <span class="skill-tag">&gt; Python</span>
+                        <span class="skill-tag">&gt; JavaScript</span>
+                        <span class="skill-tag">&gt; SQL</span>
+                    </div>
                 </div>
             </div>
 
             <!-- Frontend -->
-            <div class="skills-card">
-                <div class="skills-card-header">
-                    <i class="bx bx-layer"></i>
-                    <h3>Frontend</h3>
+            <div class="cyber-card skills-card">
+                <div class="cyber-card-header">
+                    <i class="bx bx-desktop"></i>
+                    <h3>FRONT_END</h3>
                 </div>
-                <div class="skills-list">
-                    <span class="skill-tag">React.js</span>
-                    <span class="skill-tag">Modern Web APIs</span>
-                    <span class="skill-tag">CSS Flexbox & Grid</span>
-                    <span class="skill-tag">Responsive Design</span>
-                    <span class="skill-tag">Vanilla Javascript</span>
+                <div class="cyber-card-body">
+                    <div class="skills-list">
+                        <span class="skill-tag">&gt; React.js</span>
+                        <span class="skill-tag">&gt; HTML5 / CSS3</span>
+                        <span class="skill-tag">&gt; Responsive design</span>
+                        <span class="skill-tag">&gt; Vanilla JS</span>
+                        <span class="skill-tag">&gt; Flexbox / Grid</span>
+                    </div>
                 </div>
             </div>
 
             <!-- Developer Tools -->
-            <div class="skills-card">
-                <div class="skills-card-header">
-                    <i class="bx bx-terminal"></i>
-                    <h3>Tools & Databases</h3>
+            <div class="cyber-card skills-card">
+                <div class="cyber-card-header">
+                    <i class="bx bx-git-branch"></i>
+                    <h3>INFRA_TOOLS</h3>
                 </div>
-                <div class="skills-list">
-                    <span class="skill-tag">Git & GitHub</span>
-                    <span class="skill-tag">VS Code</span>
-                    <span class="skill-tag">Node.js / Express</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">MongoDB</span>
+                <div class="cyber-card-body">
+                    <div class="skills-list">
+                        <span class="skill-tag">&gt; Git & GitHub</span>
+                        <span class="skill-tag">&gt; VS Code</span>
+                        <span class="skill-tag">&gt; Node.js</span>
+                        <span class="skill-tag">&gt; Express.js</span>
+                        <span class="skill-tag">&gt; MongoDB</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,73 +201,82 @@
     <!-- Projects Section -->
     <section class="projects-section scroll-reveal" id="projects">
         <div class="section-title">
-            <span>My Creative Works</span>
-            <h2>Featured Projects</h2>
+            <span>[ COMPILED_ARCHIVES ]</span>
+            <h2>Featured_Projects</h2>
         </div>
 
         <div class="projects-grid">
             <!-- Project 1: OmniBoard -->
             <div class="project-card">
-                <div class="project-img-box">
-                    <div class="project-overlay"></div>
-                    <i class="bx bx-layout project-img-placeholder"></i>
-                </div>
-                <div class="project-info">
-                    <span class="project-category">Web Application</span>
-                    <h3>OmniBoard</h3>
-                    <p>A comprehensive project management and task board web application designed for agile teams, featuring drag-and-drop workspace controls and task categorization.</p>
-                    <div class="project-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>CSS Grid</span>
+                <div class="project-header">
+                    <i class="bx bx-folder"></i>
+                    <div class="project-dots">
+                        <span></span>
+                        <span></span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com" target="_blank" class="project-link"><i class="bx bxl-github"></i> Source</a>
-                        <a href="#" class="project-link"><i class="bx bx-link-external"></i> Demo</a>
+                </div>
+                <div class="project-body">
+                    <span class="project-code">PROJ_01 //</span>
+                    <h3>OmniBoard</h3>
+                    <p>A multi-agent project board platform featuring drag-and-drop workspace controls, team boards, and automated backlog sync alerts.</p>
+                    <div class="project-tags">
+                        <span>#react</span>
+                        <span>#nodejs</span>
+                        <span>#css_grid</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com" target="_blank"><i class="bx bxl-github"></i> github</a>
+                        <a href="#"><i class="bx bx-link-external"></i> launch_app</a>
                     </div>
                 </div>
             </div>
 
             <!-- Project 2: Tempus -->
             <div class="project-card">
-                <div class="project-img-box">
-                    <div class="project-overlay"></div>
-                    <i class="bx bx-time-five project-img-placeholder"></i>
-                </div>
-                <div class="project-info">
-                    <span class="project-category">Productivity Tool</span>
-                    <h3>Tempus</h3>
-                    <p>A smart productivity extension and timer app designed to boost developer focus, integrate Pomodoro workflows, and log active work hours directly to reports.</p>
-                    <div class="project-tags">
-                        <span>JavaScript</span>
-                        <span>HTML/CSS</span>
-                        <span>Browser APIs</span>
+                <div class="project-header">
+                    <i class="bx bx-folder"></i>
+                    <div class="project-dots">
+                        <span></span>
+                        <span></span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com" target="_blank" class="project-link"><i class="bx bxl-github"></i> Source</a>
-                        <a href="#" class="project-link"><i class="bx bx-link-external"></i> Demo</a>
+                </div>
+                <div class="project-body">
+                    <span class="project-code">PROJ_02 //</span>
+                    <h3>Tempus</h3>
+                    <p>A smart CLI and extension productivity utility designed to automate log-ins, lock focus, and track developer milestones in real time.</p>
+                    <div class="project-tags">
+                        <span>#vanilla_js</span>
+                        <span>#html_css</span>
+                        <span>#apis</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com" target="_blank"><i class="bx bxl-github"></i> github</a>
+                        <a href="#"><i class="bx bx-link-external"></i> launch_app</a>
                     </div>
                 </div>
             </div>
 
             <!-- Project 3: TReading_hub -->
             <div class="project-card">
-                <div class="project-img-box">
-                    <div class="project-overlay"></div>
-                    <i class="bx bx-book-open project-img-placeholder"></i>
-                </div>
-                <div class="project-info">
-                    <span class="project-category">Web Platform</span>
-                    <h3>TReading Hub</h3>
-                    <p>A reading tracker and book discussion forum where users can catalog their current reads, write reviews, and share reading milestones with other bookworms.</p>
-                    <div class="project-tags">
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>Express</span>
+                <div class="project-header">
+                    <i class="bx bx-folder"></i>
+                    <div class="project-dots">
+                        <span></span>
+                        <span></span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com" target="_blank" class="project-link"><i class="bx bxl-github"></i> Source</a>
-                        <a href="#" class="project-link"><i class="bx bx-link-external"></i> Demo</a>
+                </div>
+                <div class="project-body">
+                    <span class="project-code">PROJ_03 //</span>
+                    <h3>TReading Hub</h3>
+                    <p>A backend-focused catalog platform where book lovers log reads, write custom markdown reviews, and subscribe to reading groups.</p>
+                    <div class="project-tags">
+                        <span>#mongodb</span>
+                        <span>#express</span>
+                        <span>#nodejs</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com" target="_blank"><i class="bx bxl-github"></i> github</a>
+                        <a href="#"><i class="bx bx-link-external"></i> launch_app</a>
                     </div>
                 </div>
             </div>
@@ -249,67 +286,84 @@
     <!-- Contact Section -->
     <section class="contact-section scroll-reveal" id="contact">
         <div class="section-title">
-            <span>Get in Touch</span>
-            <h2>Contact Me</h2>
+            <span>[ OPEN_TRANSMISSION ]</span>
+            <h2>Broadcast_Msg</h2>
         </div>
 
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Let's collaborate!</h3>
-                <p>Have an interesting project, internship opportunity, or just want to say hi? Drop me a message and I'll get back to you as soon as possible.</p>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="bx bx-envelope"></i>
-                        <div>
-                            <span>Email</span>
-                            <p>saran.sharma2024@vitstudent.ac.in</p>
+        <div class="contact-grid">
+            <div class="contact-console">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">contact_nodes.log</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="status-ok">[OK] Port listener active on 443...</p>
+                    <p class="desc-text">Send an encrypted broadcast package. I will receive the log packet and establish a communication channel.</p>
+                    
+                    <div class="console-details">
+                        <div class="console-item">
+                            <span class="item-tag">MAIL //</span>
+                            <p>atharv.sharma2024@vitstudent.ac.in</p>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="bx bx-map"></i>
-                        <div>
-                            <span>Location</span>
-                            <p>VIT Chennai Campus, Vandalur-Kelambakkam Road, Chennai, Tamil Nadu</p>
+                        <div class="console-item">
+                            <span class="item-tag">BASE //</span>
+                            <p>VIT Chennai Campus, Vandalur Road, Chennai</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="contact-form-box">
+            <div class="contact-form-card">
                 <form id="contactForm">
-                    <div class="input-group">
-                        <input type="text" id="name" required placeholder=" ">
-                        <label for="name">Your Name</label>
+                    <div class="form-row">
+                        <div class="input-container">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">SENDER_NAME</label>
+                            <span class="input-line"></span>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">SENDER_EMAIL</label>
+                            <span class="input-line"></span>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <input type="email" id="email" required placeholder=" ">
-                        <label for="email">Your Email</label>
-                    </div>
-                    <div class="input-group">
+                    <div class="input-container message-container">
                         <textarea id="message" required rows="5" placeholder=" "></textarea>
-                        <label for="message">Your Message</label>
+                        <label for="message">TRANSMISSION_PAYLOAD</label>
+                        <span class="input-line"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary form-btn">Send Message <i class="bx bx-paper-plane"></i></button>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span>&gt;&gt; TRANSMIT PACKET</span>
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">
-        <i class="bx bx-check-circle"></i>
-        <span>Message sent successfully!</span>
+    <!-- Console Success Notification (Toast) -->
+    <div id="toast" class="console-toast">
+        <div class="toast-header">
+            <span class="toast-indicator"></span>
+            <span>SYSTEM BROADCAST</span>
+        </div>
+        <div class="toast-body">
+            <p>[SUCCESS] Transmission packet received successfully.</p>
+            <p>Channel open. Redirecting logs...</p>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Saran Sharma. All rights reserved.</p>
-            <p class="academic-note">VIT Chennai | Reg No. 24BCe1918</p>
-            <div class="footer-socials">
-                <a href="https://github.com" target="_blank"><i class="bx bxl-github"></i></a>
-                <a href="https://linkedin.com" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        <div class="footer-grid">
+            <div class="footer-identity">
+                <p class="dev-tag">&lt;ATHARV<span>//</span>&gt;</p>
+                <p>VIT Chennai | Reg No. 24BCe1917</p>
+            </div>
+            <div class="footer-meta">
+                <p>// BUILD_VER: 2.0.26</p>
+                <p>&copy; 2026 Atharv Sharma. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -1,8 +1,8 @@
-// Portfolio Interactions for Saran Sharma
+// Portfolio Interactions for Atharv Sharma (Tech-Noir Theme)
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Mobile Hamburger Menu Toggle
+    // 1. Mobile Terminal Menu Toggle
     const menuIcon = document.getElementById('menu-icon');
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.navbar a');
@@ -10,12 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuIcon && navbar) {
         menuIcon.addEventListener('click', () => {
             navbar.classList.toggle('active');
-            // Toggle hamburger icon between menu and close X
+            // Toggle terminal icon between menu and close terminal window
             const icon = menuIcon.querySelector('i');
-            if (icon.classList.contains('bx-menu')) {
-                icon.className = 'bx bx-x';
+            if (icon.classList.contains('bx-terminal')) {
+                icon.className = 'bx bx-window-close';
+                icon.style.color = '#f43f5e'; // Highlight close button in crimson
             } else {
-                icon.className = 'bx bx-menu';
+                icon.className = 'bx bx-terminal';
+                icon.style.color = '';
             }
         });
 
@@ -24,25 +26,28 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 navbar.classList.remove('active');
                 const icon = menuIcon.querySelector('i');
-                if (icon) icon.className = 'bx bx-menu';
+                if (icon) {
+                    icon.className = 'bx bx-terminal';
+                    icon.style.color = '';
+                }
             });
         });
     }
 
-    // 2. Sticky Header and Nav-active Indicator on Scroll
+    // 2. Sticky Header & Active Navigation Tracker
     const header = document.querySelector('.header');
     const sections = document.querySelectorAll('section');
 
     window.addEventListener('scroll', () => {
-        // Sticky Header effect
+        // Sticky Header blurring
         if (header) {
             header.classList.toggle('sticky', window.scrollY > 50);
         }
 
-        // Navigation Active Links mapping
+        // Active Nav Tracker
         let currentSectionId = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 150; // offset to activate slightly early
+            const sectionTop = section.offsetTop - 150;
             const sectionHeight = section.clientHeight;
             if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                 currentSectionId = section.getAttribute('id');
@@ -51,59 +56,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSectionId}`) {
+            // Match section ID to link href
+            const href = link.getAttribute('href');
+            if (href === `#${currentSectionId}`) {
                 link.classList.add('active');
             }
         });
     });
 
-    // 3. Typewriter Animation for Hero Section
+    // 3. Command Terminal Typewriter Animation
     const typewriterElement = document.getElementById('typewriter');
-    const words = [
-        "Computer Science Student",
-        "Full Stack Developer",
-        "Problem Solver",
-        "VIT Chennai Student"
+    const statusCodes = [
+        "SYSTEMS_ENGINEER",
+        "FULL_STACK_DEVELOPER",
+        "ALGORITHM_DESIGNER",
+        "VIT_CHENNAI_SECTOR_24"
     ];
-    let wordIndex = 0;
+    let codeIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let typingSpeed = 100;
+    let typingSpeed = 80;
 
-    function type() {
+    function typeTerminal() {
         if (!typewriterElement) return;
 
-        const currentWord = words[wordIndex];
+        const currentCode = statusCodes[codeIndex];
         
         if (isDeleting) {
-            typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+            typewriterElement.textContent = currentCode.substring(0, charIndex - 1);
             charIndex--;
-            typingSpeed = 50; // speed up deleting
+            typingSpeed = 40; // speed up backspace
         } else {
-            typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+            typewriterElement.textContent = currentCode.substring(0, charIndex + 1);
             charIndex++;
-            typingSpeed = 100; // standard typing speed
+            typingSpeed = 80; // standard console typewriter speed
         }
 
-        // If word is complete, wait and then delete
-        if (!isDeleting && charIndex === currentWord.length) {
-            typingSpeed = 2000; // wait 2 seconds at the end of the word
+        // Cycle logic
+        if (!isDeleting && charIndex === currentCode.length) {
+            typingSpeed = 2500; // hold code status visible for 2.5 seconds
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length; // cycle to next word
-            typingSpeed = 500; // pause before typing next word
+            codeIndex = (codeIndex + 1) % statusCodes.length; // cycle
+            typingSpeed = 400; // short pause before typing next code
         }
 
-        setTimeout(type, typingSpeed);
+        setTimeout(typeTerminal, typingSpeed);
     }
 
-    // Start typewriter loop
     if (typewriterElement) {
-        setTimeout(type, 1000);
+        setTimeout(typeTerminal, 1000);
     }
 
-    // 4. Intersection Observer for Scroll Reveals
+    // 4. Scroll Reveal Intersection Observer
     const revealElements = document.querySelectorAll('.scroll-reveal');
     
     if (revealElements.length > 0) {
@@ -111,12 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // Once animated, we don't need to observe it anymore
                     observer.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.15 // trigger when 15% of the element is visible
+            threshold: 0.12
         });
 
         revealElements.forEach(element => {
@@ -124,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Contact Form Submission handling (Simulated)
+    // 5. Contact Form Transmission Simulator (Console Success Logs)
     const contactForm = document.getElementById('contactForm');
     const toast = document.getElementById('toast');
 
@@ -132,35 +137,34 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const submitBtn = contactForm.querySelector('.form-btn');
-            const originalBtnContent = submitBtn.innerHTML;
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalBtnText = submitBtn.querySelector('span').textContent;
 
-            // Set sending / loading state on submit button
+            // Log submission packet action
             submitBtn.disabled = true;
-            submitBtn.style.opacity = '0.7';
-            submitBtn.innerHTML = 'Sending... <i class="bx bx-loader-alt bx-spin"></i>';
+            submitBtn.style.opacity = '0.6';
+            submitBtn.querySelector('span').textContent = '>> TRANSMITTING_LOGS...';
 
-            // Simulate server network latency
             setTimeout(() => {
-                // Reset button state
+                // Restore button state
                 submitBtn.disabled = false;
                 submitBtn.style.opacity = '1';
-                submitBtn.innerHTML = originalBtnContent;
+                submitBtn.querySelector('span').textContent = originalBtnText;
 
-                // Reset form fields
+                // Reset form input values
                 contactForm.reset();
 
-                // Trigger Toast success notification
+                // Trigger Console Toast succes notification
                 if (toast) {
                     toast.classList.add('show');
 
-                    // Hide toast after 3.5 seconds
+                    // Close toast notification after 4 seconds
                     setTimeout(() => {
                         toast.classList.remove('show');
-                    }, 3500);
+                    }, 4000);
                 }
 
-            }, 1500);
+            }, 1800);
         });
     }
 });
